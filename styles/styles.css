@@ -1,4 +1,4 @@
-/************* your name: 
+/************* your name: Joey Adam
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
@@ -13,6 +13,13 @@ You are discouraged from changing any provided CSS.
 
 */
 
+header, footer, a.fake-button {
+    background-color: #E5AF42;
+}
+
+a:hover{
+    background-color: #4278e5;
+}
 
 /************* site defaults *************/
 body {
@@ -24,15 +31,17 @@ body {
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
 
-
+.flex{
+    display: flex;
+}
  
 
 /************* site-wide text styling *************/
 
 /* TO DO:
-    - first-level headings are size 48px, centered vertically and horizontally in the available space.
-    - 2nd-level headings have a font size of 36px, and 12px of space below.
-    - any element with the .large-text class has a font size of 24px.
+    - first-level headings are size 48px, centered vertically and horizontally in the available space. -
+    - 2nd-level headings have a font size of 36px, and 12px of space below. -
+    - any element with the .large-text class has a font size of 24px. -
     - any element with the .fake-button class will have a background colour of mustard yellow (see colour palette above), be center aligned, with a line-height of 3 and a solid black border that is 1px wide.
     - all anchors will have the underline removed and be black in colour. all anchors in the main and footer sections will be underlined in their hover-state.
     - the hover-state of .fake-button and .blue-hover elements will:
@@ -42,12 +51,41 @@ body {
         - change the cursor to pointer.
 */
 
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
 
+h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
 
+.large-text {
+    font-size: 24px;
+}
 
+.fake-button {
+    text-align: center;
+    line-height: 3;
+    border: 1px solid black;
+}
 
+a:hover, a:link{
+    text-decoration: none;
+    color: black;
+}
 
+main a:hover, footer a:hover {
+    text-decoration: underline;
+}
 
+a.fake-button:hover, a.blue-hover:hover {
+    text-decoration: underline;
+    background-color: #4278e5;
+    color: white;
+    cursor: pointer;
+}
 
 /************* header/footer styling *************/
 
