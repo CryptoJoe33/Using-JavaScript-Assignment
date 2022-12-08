@@ -90,16 +90,42 @@ a.fake-button:hover, a.blue-hover:hover {
 /************* header/footer styling *************/
 
 /* TO DO:
-    - the header and footer will be the same mustard-yellow as the buttons.
-    - the header is 150px tall.
+    - the header and footer will be the same mustard-yellow as the buttons. -
+    - the header is 150px tall. -
     - the header image is 100px wide and tall with 25px of space above, below, and on its left, and the top-level heading is centered in the remaining width.
-    - there will be 25px of space between the header and main, and 50px of space between main and footer.
-    - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
+    - there will be 25px of space between the header and main, and 50px of space between main and footer. -
+    - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally. -
 */
 
+header, footer {
+    background-color: #E5AF42;
+}
 
+header {
+    height: 150px;
+    margin-bottom: 25px;
+}
 
+header img {
+    width: 100px;
+    height: 100px;
+    margin: 25px 0px 25px 25px;
+}
 
+header h1 {
+    width: auto;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+footer {
+    height: 60px;
+    font-weight: 200;
+    text-align: center;
+    padding: 15px;
+}
 
 
 /************* index page *************/
@@ -112,10 +138,23 @@ a.fake-button:hover, a.blue-hover:hover {
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
 
+main img {
+    float: right;
+    width: 300px;
+    margin-left: 25px;
+    margin-bottom: 50px;
+}
 
+main p {
+    float: left;
+    margin-bottom: 12px;
+}
 
-
-
+.fake-button {
+    width: calc(100% - 250px);
+    width: 250px;
+    margin: 100px;
+}
 
 /************* bookings page *************/
 
