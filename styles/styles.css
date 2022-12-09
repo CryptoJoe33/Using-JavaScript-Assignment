@@ -17,7 +17,7 @@ header, footer, a.fake-button {
     background-color: #E5AF42;
 }
 
-a:hover{
+a:hover, button:hover{
     background-color: #4278e5;
 }
 
@@ -170,17 +170,42 @@ main p {
 
 */
 
+main.booking-page {
+    width: 600px;
+    text-align: center;
+    font-size: 18px;
+}
 
+.day-selector {
+    padding-bottom: 12px;
+}
 
+main li {
+    margin: 20px;
+    width: 60px;
+}
 
+main li, .small-button {
+    border: 1px solid black;
+}
 
+.small-button {
+    border-spacing: 5px;
+}
 
+.top-margin {
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
 
+p.fake-button {
+    width: 200px;
+    margin: 0px;
+}
 
-
-
-
-
+.clicked {
+    background-color: #E5AF42;
+}
 
 /************* contact page *************/
 /* TO DO:
@@ -191,6 +216,41 @@ main p {
     - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
 */
 
+main.contact {
+    height: 420px;
+    text-align: center;
+}
 
+label {
+    width: 150px;
+    float: right;
+}
 
+input, textarea {
+    width: 300px;
+    float: left;
+}
 
+label, input, textarea {
+    margin: 24px;
+}
+
+textarea {
+    height: 150px;
+}
+
+form input textarea label {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 24px;
+    font-size: 16px;
+    border: 1px solid black;
+    margin-bottom: 24px;
+}
+
+form {
+    text-align: center;
+}
+
+button.fake-button {
+    margin-top: 0px;
+}
