@@ -71,7 +71,7 @@ h2 {
     border: 1px solid black;
 }
 
-a:hover, a:link{
+a:hover, a:link, a:visited, a:active{
     text-decoration: none;
     color: black;
 }
@@ -86,7 +86,6 @@ a.fake-button:hover, a.blue-hover:hover {
     color: white;
     cursor: pointer;
 }
-
 /************* header/footer styling *************/
 
 /* TO DO:
@@ -114,6 +113,7 @@ header img {
 
 header h1 {
     width: auto;
+    margin: auto;
 }
 
 main {
@@ -145,7 +145,7 @@ main img {
     margin-bottom: 50px;
 }
 
-main p {
+main.index p {
     float: left;
     margin-bottom: 12px;
 }
@@ -173,6 +173,8 @@ main p {
 main.booking-page {
     width: 600px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 18px;
 }
 
@@ -180,8 +182,10 @@ main.booking-page {
     padding-bottom: 12px;
 }
 
-main li {
+main li.blue-hover{
     margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
     width: 60px;
 }
 
@@ -201,10 +205,33 @@ main li, .small-button {
 p.fake-button {
     width: 200px;
     margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.clicked {
+p.fake-button:hover, p.blue-hover:hover {
+    text-decoration: underline;
+    background-color: #4278e5;
+    color: white;
+    cursor: pointer;
+}
+
+.clicked{
     background-color: #E5AF42;
+}
+
+#weekday:link, #weekday:hover {
+    text-decoration: underline;
+    background-color: #E5AF42;
+    color: white;
+    cursor: pointer;
+}
+
+#weekday:visited {
+    text-decoration: none;
+    background-color: #E5AF42;
+    color: black;
+    cursor: pointer;
 }
 
 /************* contact page *************/
@@ -224,15 +251,17 @@ main.contact {
 label {
     width: 150px;
     float: right;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 24px;
+    margin-top: 24px;
 }
 
 input, textarea {
     width: 300px;
     float: left;
-}
-
-label, input, textarea {
     margin: 24px;
+    margin-right: auto;
 }
 
 textarea {
@@ -247,10 +276,24 @@ form input textarea label {
     margin-bottom: 24px;
 }
 
-form {
+main form {
     text-align: center;
 }
 
 button.fake-button {
     margin-top: 0px;
+}
+
+#submit-button {
+    margin-left: 300px;
+    width: 305px;
+    background-color: #E5AF42;
+
+}
+
+#submit-button:hover {
+    text-decoration: underline;
+    background-color: #4278e5;
+    color: white;
+    cursor: pointer;
 }
