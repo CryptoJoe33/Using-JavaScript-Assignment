@@ -4,8 +4,7 @@
 // When do they need to be reset or updated? 
 
 var costDay = 0;
-var clearDay = document.getElementById("#clear-button");
-var numDay = document.getElementById("#weekday");
+var clearDay = document.querySelector("#clear-button");
 var fullDay = document.getElementById("#full");
 var halfDay = document.getElementById("#half");
 
@@ -14,17 +13,18 @@ var halfDay = document.getElementById("#half");
 // when the day buttons are clicked, we will apply the "clicked" class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
 
-numDay.onclick = () => {
-    numDay.classList.add("clicked");
+const numDay = document.querySelectorAll("#weekday");
+
+for (const num of numDay) {
+  num.addEventListener('click', function dayClick() {
+    num.classList.add('clicked');
+  });
 }
 
-/*if (numDay) {
-    numDay.addEventListener("click", clickedClass);
-}*/
-
-/*function clickedClass () {
+/*numDay.onclick = () => {
     numDay.classList.add("clicked");
 }*/
+
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.

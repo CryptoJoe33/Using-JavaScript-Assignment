@@ -216,14 +216,14 @@ p.fake-button:hover, p.blue-hover:hover {
     cursor: pointer;
 }
 
-.clicked{
+.clicked {
     background-color: #E5AF42;
 }
 
 #weekday:link, #weekday:hover {
     text-decoration: underline;
     background-color: #E5AF42;
-    color: white;
+    color: black;
     cursor: pointer;
 }
 
@@ -233,7 +233,6 @@ p.fake-button:hover, p.blue-hover:hover {
     color: black;
     cursor: pointer;
 }
-
 /************* contact page *************/
 /* TO DO:
     - the main section of the .contact page will be 420px tall, and centered.
