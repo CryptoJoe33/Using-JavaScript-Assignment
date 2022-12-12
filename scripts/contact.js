@@ -4,6 +4,7 @@ const contactButton = document.querySelector("#submit-button");
 const headingA = document.querySelector("#contact-page");
 
 contactButton.onclick = () => {
+    headingA.classList.add('thanks');
     headingA.textContent = ("Thank you for your message!");
 }
 

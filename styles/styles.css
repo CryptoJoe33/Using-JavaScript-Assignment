@@ -296,3 +296,7 @@ button.fake-button {
     color: white;
     cursor: pointer;
 }
+
+.thanks {
+    font-size: 24px;
+}
