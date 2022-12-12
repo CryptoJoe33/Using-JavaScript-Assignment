@@ -4,7 +4,7 @@
 // When do they need to be reset or updated? 
 
 var costDay = 0;
-var clearDay = document.querySelector("#clear-button");
+var dayClicked = 0;
 var fullDay = document.getElementById("#full");
 var halfDay = document.getElementById("#half");
 
@@ -16,29 +16,24 @@ var halfDay = document.getElementById("#half");
 const numDay = document.querySelectorAll("#weekday");
 
 for (const num of numDay) {
-  num.addEventListener('click', function dayClick() {
-    num.classList.add('clicked');
-  });
+        num.addEventListener('click', function dayClick() {
+        num.classList.add('clicked');
+        dayClicked ++;
+    });
 }
-
-/*numDay.onclick = () => {
-    numDay.classList.add("clicked");
-}*/
-
 
 /********* clear days *********/
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 
-if (clearDay){
-    clearDay.addEventListener("click", clearNum);
-}
+const clearDay = document.querySelector("#clear-button");
 
-function clearNum () {
-    let costLabel = document.getElementById("#calculated-cost");
-    numDay.classList.remove(".clicked");
-    costLabel.innerHTML = 0;
-}
+clearDay.addEventListener('click', () => {
+    const elements = document.querySelectorAll('#weekday');
 
+    elements.forEach((element) => {
+        element.classList.remove('clicked');
+  });
+});
 
 /********* change rate *********/
 // when the half-day button is clicked, set the daily rate to $20, add the "clicked" class to the "half" element, remove it from the "full" element, and recalculate the total cost.
