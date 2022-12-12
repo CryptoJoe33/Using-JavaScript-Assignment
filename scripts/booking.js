@@ -5,20 +5,28 @@
 
 var dayClicked = 0;
 var dailyRate = 0;
+let costLabel = document.getElementById('calculated-cost');
 
 /********* colour change days of week *********/
 // when the day buttons are clicked, we will apply the 'clicked' class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
 
 const numDay = document.querySelectorAll('#weekday');
-let costLabel = document.getElementById('calculated-cost');
+
 
 for (const num of numDay) {
     num.addEventListener('click', function dayClick() {
         num.classList.add('clicked');
         dayClicked ++;
-        cost = dayClicked * dailyRate
-        costLabel.innerHTML = cost;
+        if (halfDay.classList.contains('clicked')) {
+            dailyRate = 20;
+            cost = dayClicked * dailyRate;
+            costLabel.innerHTML = cost;
+        } else if (fullDay.classList.contains('clicked')) {
+            dailyRate = 35;
+            cost = dayClicked * dailyRate;
+            costLabel.innerHTML = cost;
+        }
     });
 };
 
@@ -46,10 +54,7 @@ halfDay.addEventListener('click', () => {
     const elements = document.querySelector('#half');
     halfDay.classList.add('clicked');
     if (halfDay.classList.contains('clicked')){
-        dailyRate = 20;
         fullDay.classList.remove('clicked');
-        cost = dayClicked * dailyRate
-        costLabel.innerHTML = cost;
     }
 });
 
@@ -61,13 +66,25 @@ fullDay.addEventListener('click', () => {
     const elements = document.querySelector('#full');
     fullDay.classList.add('clicked');
     if (fullDay.classList.contains('clicked')){
-        dailyRate = 35;
         halfDay.classList.remove('clicked');
-        cost = dayClicked * dailyRate
-        costLabel.innerHTML = cost;
     }
 });
 
 /********* calculate *********/
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
+fullDay.addEventListener('click', () => {
+    const elements = document.querySelector('#full');
+        dailyRate = 20;
+        cost = dayClicked * dailyRate;
+        costLabel.innerHTML = cost;
+    }
+);
+
+halfDay.addEventListener('click', () => {
+    const elements = document.querySelector('#half');
+        dailyRate = 20;
+        cost = dayClicked * dailyRate;
+        costLabel.innerHTML = cost;
+    }
+);
