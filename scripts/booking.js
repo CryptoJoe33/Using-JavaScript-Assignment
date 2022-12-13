@@ -67,7 +67,7 @@ fullDay.addEventListener('click', () => {
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 fullDay.addEventListener('click', function fullCost () {
-        dailyRate = 20;
+        dailyRate = 35;
         cost = dayClicked * dailyRate;
         costLabel.innerHTML = cost;
     }
